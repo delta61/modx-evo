@@ -1,0 +1,37 @@
+для Parameters (Multiple x Х)
+
+<div>
+	<span>[+px_params_1+]</span><span>[+px_params_2+]</span><span>[+px_params_3+]</span><span>[+px_params_4+]</span><span>[+px_params_5+]</span>
+</div>
+
+
+
+
+
+
+
+
+для Colors (Multiple) - 
+
+<div class="wrapColor">
+	<a class="highslide " onclick="return hs.expand(this)" href="[[ImgCrop6? &img=`[+px_images+]` &w=`200` &h=`200`]]">
+		<img src="[[ImgCrop6? &img=`[+px_images+]` &w=`50` &h=`50`]]" alt="">
+	</a>
+	<div>Наименование - [+px_name+]. 
+		<span>Описание - [+px_description+]</span>
+	</div>
+</div>
+
+
+
+
+
+
+
+для Images (Multiple) - 
+
+<div class="wrap">
+	<a class="highslide " onclick="return hs.expand(this)" href="[[ImgCrop6? &img=`[+px_images+]` &w=`600` &h=`600`]]">
+		<img src="[[ImgCrop6? &img=`[+px_images+]` &w=`200` &h=`170`]]" alt="">
+	</a>
+</div>
