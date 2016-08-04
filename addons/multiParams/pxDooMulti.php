@@ -23,10 +23,11 @@ $content='';
 
 //getTVtype AND id
 if (isset($tv)){
-	$sql = "SELECT type, id FROM ". $modx->getFullTableName( 'site_tmplvars' ) ." WHERE  `name` = '".$tv."' LIMIT 1 ";
-	$result = mysql_query($sql);
-	if ($result && mysql_num_rows($result) > 0) {
-		if ($tmp = mysql_fetch_assoc($result)){
+	//$sql = "SELECT type, id FROM ". $modx->getFullTableName( 'site_tmplvars' ) ." WHERE  `name` = '".$tv."' LIMIT 1 ";
+	$result = $modx->db->query( "SELECT type, id FROM ". $modx->getFullTableName( 'site_tmplvars' ) ." WHERE  `name` = '".$tv."' LIMIT 1 " );
+	//$result = mysql_query('SELECT * FROM  `ingidr_site_tmplvars`');
+	if ($result && $modx->db->getRecordCount( $result ) > 0) {
+		if ($tmp = $modx->db->getRow( $result )){
 			$typeTV = $tmp['type'];
 			$idTV = $tmp['id'];
 		} else $err = true;
@@ -38,10 +39,11 @@ if (isset($tv)){
 //getChunkBody
 if (!$err) {
 	if (isset($tpl)){
-		$sql = "SELECT snippet FROM ". $modx->getFullTableName( 'site_htmlsnippets' ) ." WHERE  `name` = '".$tpl."' LIMIT 1 ";
-		$result = mysql_query($sql);
-		if ($result && mysql_num_rows($result) > 0) {
-			if ($tmp = mysql_fetch_assoc($result)){
+		//$sql = "SELECT snippet FROM ". $modx->getFullTableName( 'site_htmlsnippets' ) ." WHERE  `name` = '".$tpl."' LIMIT 1 ";
+		$result = $modx->db->query( "SELECT snippet FROM ". $modx->getFullTableName( 'site_htmlsnippets' ) ." WHERE  `name` = '".$tpl."' LIMIT 1 " );
+		//$result = mysql_query($sql);
+		if ($result && $modx->db->getRecordCount( $result ) > 0) {
+			if ($tmp = $modx->db->getRow( $result )){
 				$chunkBody = $tmp['snippet'];
 			} else $err = true;
 		}else $err = true;
@@ -52,10 +54,11 @@ if (!$err) {
 //getTVvalue
 if (!$err) {
 	if (isset($tpl)){
-		$sql = "SELECT value FROM ". $modx->getFullTableName( 'site_tmplvar_contentvalues' ) ." WHERE  `tmplvarid` = ".$idTV." AND contentid = ".$resourceId." LIMIT 1 ";
-		$result = mysql_query($sql);
-		if ($result && mysql_num_rows($result) > 0) {
-			if ($tmp = mysql_fetch_assoc($result)){
+		//$sql = "SELECT value FROM ". $modx->getFullTableName( 'site_tmplvar_contentvalues' ) ." WHERE  `tmplvarid` = ".$idTV." AND contentid = ".$resourceId." LIMIT 1 ";
+		$result = $modx->db->query( "SELECT value FROM ". $modx->getFullTableName( 'site_tmplvar_contentvalues' ) ." WHERE  `tmplvarid` = ".$idTV." AND contentid = ".$resourceId." LIMIT 1 " );
+		//$result = mysql_query($sql);
+		if ($result && $modx->db->getRecordCount( $result ) > 0) {
+			if ($tmp = $modx->db->getRow( $result )){
 				$valueTV = $tmp['value'];
 			} else $err = true;
 		}else $err = true;
