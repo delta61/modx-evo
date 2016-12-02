@@ -1,7 +1,0 @@
-<?php
-$prefix = $modx->getFullTableName("site_tmplvar_contentvalues");
-$sql = "SELECT contentid FROM $prefix WHERE tmplvarid = 12"; //tmplvarid - id нужного tv-параметра с чекбоксом
-$result = $modx->db->query($sql);
-while ($ids1 =  $modx->db->getRow( $result ) )
-{print "[[Ditto? &tpl=`cat-item` &noResults=` ` &sortBy=`menuindex` &sortDir=`ASC` &documents=`". $ids1['contentid'] ."`]]";}
-?>
