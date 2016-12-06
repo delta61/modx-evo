@@ -23,7 +23,7 @@ function dirFileTreeCheckMD($folder, $space) {
     $files = scandir($folder);
 	
 	$tt = 0;
-	$max = 100;
+	$max = 200;
 	
     foreach($files as $file) {
 
