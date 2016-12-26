@@ -4,14 +4,14 @@ error_reporting(7);
 
 /*
 $database_type = 'mysql';
-$database_server = 'localhost';
-$database_user = 'alfa-ltd-ru';
-$database_password = 'h_g98M0wO1j4';
+$database_server = '';
+$database_user = '';
+$database_password = '';
 $database_connection_charset = 'utf8';
 $database_connection_method = 'SET NAMES';
-$dbase = '`alfa-ltd-ru_kproduct`';
+$dbase = '';
 $table_prefix = 'kprod_';
-$link = mysql_connect('localhost', 'alfa-ltd-ru', 'h_g98M0wO1j4');
+$link = mysql_connect('localhost', '', '');
 if (!$link) {
     die('Ошибка соединения: ' . mysql_error());
 }
@@ -34,7 +34,7 @@ define('TAB_PREFIX', $table_prefix);
 
 
 
-$dbaseClearApost = 'alfa-ltd-ru_kproduct'; ////AAAAAAAAAAAAAAAAA!!!
+$dbaseClearApost = ''; ////AAAAAAAAAAAAAAAAA!!!
 
 $dsn = "mysql:host=$database_server;dbname={$dbaseClearApost};charset=$database_connection_charset";
 $opt = array(
