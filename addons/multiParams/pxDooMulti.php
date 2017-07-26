@@ -1,9 +1,17 @@
 <?php
-//pxDooMulti
-
+/**
+ * pxDooMulti
+ * 
+ * обработчик мн.пар
+ *
+ * @author	px2x
+ * @category 	snippet
+ * @version 	0.2.1
+ * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
+ * @internal	@modx_category Content
+ * @internal    @installset base, sample
+ */
 /*
-*
-*
 *
 *	&tpl=`NameMyChunk` 
 *	&tv=`testTV`
